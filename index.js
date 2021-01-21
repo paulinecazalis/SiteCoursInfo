@@ -83,8 +83,12 @@ function page3(){
         cardCours.appendChild(cardCourscnt);
         document.getElementById("container").appendChild(cardCours);
     }
-    //document.getElementById('container').removeChild(document.getElementById("cardSem1"));
-    //document.getElementById('container').removeChild(document.getElementById("cardSem2"));
+    if(document.getElementById("cardSem1")){
+        document.getElementById('container').removeChild(document.getElementById("cardSem1"));
+    }
+    if(document.getElementById("cardSem2")){
+        document.getElementById('container').removeChild(document.getElementById("cardSem2")); 
+    }
     document.getElementById('back').onclick = function(){
         for(let i = 0; i < cours.length; i++){
             document.getElementById('container').removeChild(document.getElementById("cardcours"));
@@ -107,7 +111,7 @@ function afficheCours(){
     let cardCourscrs = document.createElement('div');
     cardCourscrs.className = "card";
     cardCourscrs.id = "cardcourscrs";
-    
+    cardCourscrs.onclick = function(){pageCours()};
     let cardCourscnt = document.createElement('div');
     cardCourscnt.className = "content";
     let cardCoursimgBx =  document.createElement('div');
@@ -127,14 +131,76 @@ function afficheCours(){
     cardCourscnt.appendChild(cardCourscntBx);
     cardCourscrs.appendChild(cardCourscnt);
     document.getElementById("container").appendChild(cardCourscrs);
+
+    let cardTdcrs = document.createElement('div');
+    cardTdcrs.className = "card";
+    cardTdcrs.id = "cardtdcrs";
+    let cardTdcnt = document.createElement('div');
+    cardTdcnt.className = "content";
+    let cardTdimgBx =  document.createElement('div');
+    cardTdimgBx.className = "imgBx";
+    let cardTdimg = document.createElement('img');
+    cardTdimg.src ="./src/img/livre.png"
+    let cardTdcntBx = document.createElement('div');
+    cardTdcntBx.className = "contentBx";
+    let cardTdtitle = document.createElement('h3');
+    cardTdtitle.id = "title"
+    cardTdtitle.className = "title-cours";
+    cardTdtitle.innerHTML = "TD";
+
+    cardTdcntBx.appendChild(cardTdtitle);
+    cardTdimgBx.appendChild(cardTdimg);
+    cardTdcnt.appendChild(cardTdimgBx);
+    cardTdcnt.appendChild(cardTdcntBx);
+    cardTdcrs.appendChild(cardTdcnt);
+    document.getElementById("container").appendChild(cardTdcrs);
+
+    let cardTpcrs = document.createElement('div');
+    cardTpcrs.className = "card";
+    cardTpcrs.id = "cardtpcrs";
+    let cardTpcnt = document.createElement('div');
+    cardTpcnt.className = "content";
+    let cardTpimgBx =  document.createElement('div');
+    cardTpimgBx.className = "imgBx";
+    let cardTpimg = document.createElement('img');
+    cardTpimg.src ="./src/img/livre.png"
+    let cardTpcntBx = document.createElement('div');
+    cardTpcntBx.className = "contentBx";
+    let cardTptitle = document.createElement('h3');
+    cardTptitle.id = "title"
+    cardTptitle.className = "title-cours";
+    cardTptitle.innerHTML = "TP";
+
+    cardTpcntBx.appendChild(cardTptitle);
+    cardTpimgBx.appendChild(cardTpimg);
+    cardTpcnt.appendChild(cardTpimgBx);
+    cardTpcnt.appendChild(cardTpcntBx);
+    cardTpcrs.appendChild(cardTpcnt);
+    document.getElementById("container").appendChild(cardTpcrs);
+
     
     for(let i = 0; i < cours.length; i++){
         document.getElementById('container').removeChild(document.getElementById("cardcours"));
     }
     document.getElementById('back').onclick = function(){
         document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
+        document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
+        document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
+        document.getElementById('content-table').style.display = 'none';
         page3();
-        
+    };
+
+}
+
+function pageCours(){
+    document.getElementById('content-table').style.display = 'block';
+    document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
+    document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
+    document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
+
+    document.getElementById('back').onclick = function(){
+        document.getElementById('content-table').style.display = 'none';
+        page3();
     };
 
 }
