@@ -8,7 +8,7 @@ function page2(){
     let sem1 = document.createElement('div');
     sem1.className = "card";
     sem1.id = "cardSem1";
-    sem1.onclick = function(){page3()};
+    //sem1.onclick = function(){page3()};
     let sem1cnt = document.createElement('div');
     sem1cnt.className = "content";
     let sem1imgBx =  document.createElement('div');
@@ -24,6 +24,7 @@ function page2(){
     let sem2 = document.createElement('div');
     sem2.className = "card";
     sem2.id = "cardSem2";
+    sem2.onclick = function(){page3()};
     let sem2cnt = document.createElement('div');
     sem2cnt.className = "content";
     let sem2imgBx =  document.createElement('div');
@@ -59,6 +60,8 @@ function page3(){
         cardCours.onclick = function(){
             for(let j = 0; j<cours.length; j++){
                 if(cardCourstitle.textContent == cours[j].name){
+                    document.getElementById('title-cours').style.display = "block";
+                    document.getElementById('title-cours').innerHTML = cours[j].name;
                     afficheCours();
                 }
             }
@@ -82,6 +85,7 @@ function page3(){
         cardCourscnt.appendChild(cardCourscntBx);
         cardCours.appendChild(cardCourscnt);
         document.getElementById("container").appendChild(cardCours);
+
     }
     if(document.getElementById("cardSem1")){
         document.getElementById('container').removeChild(document.getElementById("cardSem1"));
@@ -95,6 +99,8 @@ function page3(){
         }
         page2();
     };
+        
+    
 }
 
 function menuBack(){
@@ -111,7 +117,9 @@ function afficheCours(){
     let cardCourscrs = document.createElement('div');
     cardCourscrs.className = "card";
     cardCourscrs.id = "cardcourscrs";
-    cardCourscrs.onclick = function(){pageCours()};
+    cardCourscrs.onclick = function(){
+        pageCours();
+    };
     let cardCourscnt = document.createElement('div');
     cardCourscnt.className = "content";
     let cardCoursimgBx =  document.createElement('div');
@@ -178,15 +186,25 @@ function afficheCours(){
     cardTpcrs.appendChild(cardTpcnt);
     document.getElementById("container").appendChild(cardTpcrs);
 
-    
-    for(let i = 0; i < cours.length; i++){
-        document.getElementById('container').removeChild(document.getElementById("cardcours"));
+    if(document.getElementById("cardcours")){
+        for(let i = 0; i < cours.length; i++){
+            document.getElementById('container').removeChild(document.getElementById("cardcours"));
+        }
     }
+    
     document.getElementById('back').onclick = function(){
-        document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
-        document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
-        document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
-        document.getElementById('content-table').style.display = 'none';
+        if(document.getElementById("cardcourscrs")){
+            document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
+        }
+
+        if(document.getElementById("cardtpcrs")){
+            document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
+        }
+
+        if(document.getElementById("cardtdcrs")){
+            document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
+        }
+        document.getElementById('title-cours').style.display = 'none';
         page3();
     };
 
@@ -197,10 +215,53 @@ function pageCours(){
     document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
     document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
     document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
-
-    document.getElementById('back').onclick = function(){
-        document.getElementById('content-table').style.display = 'none';
-        page3();
-    };
+    for(let i = 0; i<cours.length; i++){
+       if(document.getElementById('title-cours').textContent == cours[i].name){
+           let nmcrs = Object.values(cours[i].Cours);
+           if(cours[i].Cours != null){
+               for(let j = 0; j< nmcrs.length; j++){
+                   let tr = document.createElement('tr');
+                   tr.id = "trTable"
+                   let td1 = document.createElement('td');
+                   td1.id = "numTable";
+                   td1.textContent = nmcrs[j].index;
+                   let td2 = document.createElement('td');
+                   td2.id = "nomTable";
+                   td2.textContent = nmcrs[j].Titre;
+                   let td3 = document.createElement('td');
+                   td3.id = "pdfTable";
+                   let td3a = document.createElement('a')
+                   td3a.href = nmcrs[j].pdf;
+                   td3a.textContent = "Cours";
+                   tr.appendChild(td1);
+                   tr.appendChild(td2);
+                   tr.appendChild(td3);
+                   td3.appendChild(td3a);
+                   document.getElementById("tbody").appendChild(tr);
+                   
+                   //pas vide retour
+                   document.getElementById('back').onclick = function(){
+                       document.getElementById('content-table').style.display = 'none';
+                       for(let i = 0; i < document.getElementById("tbody").rows.length; i++){
+                           if(document.getElementById("trTable")){
+                               document.getElementById("tbody").removeChild(document.getElementById("trTable"));
+                            }
+                        }
+                        afficheCours();
+                    }
+                }
+            }else{
+               document.getElementById('back').onclick = function(){
+                   document.getElementById('content-table').style.display = 'none';
+                   for(let i = 0; i < document.getElementById("tbody").rows.length; i++){
+                       if(document.getElementById("trTable")){
+                           document.getElementById("tbody").removeChild(document.getElementById("trTable"));
+                        }
+                    }
+                    afficheCours();
+                }
+            }
+       }
+    }
 
 }

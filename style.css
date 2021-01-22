@@ -122,21 +122,44 @@ section::after{
     text-transform: initial;
 }
 
+#title-cours{
+    color: white;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 10%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
 
 /*----------------------------TABLEAU---------------------------------------------*/
+table{
+    width: 100%;
+}
+th {
+    height: 50px;
+    width: 300px;
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+#numTable, #nomTable{
+    text-align: left;
+}
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     display: none;
   }
   
   .content-table thead tr {
-    background-color: #009879;
+    background-color: rgba(255, 255, 255, 0.05);
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -149,7 +172,7 @@ section::after{
   
   .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
-    background-color: brown;
+    background-color:  #cbdfea;
   }
   
   .content-table tbody tr:nth-of-type(even) {
