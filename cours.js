@@ -27,9 +27,15 @@ var cours = [
         "Cours" : {
             "Cours1" : {
                 "index" : 1,
-                "Titre" : "Cours 1",
+                "Titre" : "Cours 1 : Architectures N-tiers",
                 "pdf" : "./src/pdf/devwebavancee/cours-architecture.pdf"
+            },
+            "Cours2" : {
+                "index" : 2,
+                "Titre" : "Cours 2 : Java DataBase Connectivity",
+                "pdf" : "./src/pdf/devwebavancee/cours-JDBC.pdf"
             }
+
         }
     },
     {
