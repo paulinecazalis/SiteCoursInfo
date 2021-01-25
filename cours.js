@@ -94,6 +94,11 @@ var cours = [
                 "index" : 3,
                 "Titre" : "Cours 2 : Exclusion mutuelle",
                 "pdf" : "./src/pdf/systemedistr/cours-mutex.pdf"
+            },
+            "Cours4" : {
+                "index" : 4,
+                "Titre" : "Cours 3 : Accord & coordination",
+                "pdf" : "./src/pdf/systemedistr/cours-accord.pdf"
             }
         }
     },
