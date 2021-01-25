@@ -89,6 +89,11 @@ var cours = [
                 "index" : 2,
                 "Titre" : "Cours 1 : Modélisation conceptuelle des Systèmes Distribués",
                 "pdf" : "./src/pdf/systemedistr/cours-modele-sd.pdf"
+            },
+            "Cours3" : {
+                "index" : 3,
+                "Titre" : "Cours 2 : Exclusion mutuelle",
+                "pdf" : "./src/pdf/systemedistr/cours-mutex.pdf"
             }
         }
     },
