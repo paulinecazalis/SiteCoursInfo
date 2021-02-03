@@ -169,6 +169,9 @@ function afficheCours(){
     let cardTpcrs = document.createElement('div');
     cardTpcrs.className = "card";
     cardTpcrs.id = "cardtpcrs";
+    cardTpcrs.onclick = function(){
+        pageTp();
+    };
     let cardTpcnt = document.createElement('div');
     cardTpcnt.className = "content";
     let cardTpimgBx =  document.createElement('div');
@@ -291,6 +294,62 @@ function pageTd(){
                    td3.id = "pdfTable";
                    let td3a = document.createElement('a')
                    td3a.href = nmtd[j].pdf;
+                   td3a.textContent = "Cours";
+                   tr.appendChild(td1);
+                   tr.appendChild(td2);
+                   tr.appendChild(td3);
+                   td3.appendChild(td3a);
+                   document.getElementById("tbody").appendChild(tr);
+                   
+                   //pas vide retour
+                   document.getElementById('back').onclick = function(){
+                       document.getElementById('content-table').style.display = 'none';
+                       for(let i = 0; i < document.getElementById("tbody").rows.length; i++){
+                           if(document.getElementById("trTable")){
+                               document.getElementById("tbody").removeChild(document.getElementById("trTable"));
+                            }
+                        }
+                        afficheCours();
+                    }
+                }
+            }else{
+               document.getElementById('back').onclick = function(){
+                   document.getElementById('content-table').style.display = 'none';
+                   for(let i = 0; i < document.getElementById("tbody").rows.length; i++){
+                       if(document.getElementById("trTable")){
+                           document.getElementById("tbody").removeChild(document.getElementById("trTable"));
+                        }
+                    }
+                    afficheCours();
+                }
+            }
+       }
+    }
+
+}
+
+function pageTp(){
+    document.getElementById('content-table').style.display = 'block';
+    document.getElementById('container').removeChild(document.getElementById("cardcourscrs"));
+    document.getElementById('container').removeChild(document.getElementById("cardtpcrs"));
+    document.getElementById('container').removeChild(document.getElementById("cardtdcrs"));
+    for(let i = 0; i<cours.length; i++){
+       if(document.getElementById('title-cours').textContent == cours[i].name){
+           let nmtp = Object.values(cours[i].TP);
+           if(cours[i].TP != null){
+               for(let j = 0; j< nmtp.length; j++){
+                   let tr = document.createElement('tr');
+                   tr.id = "trTable"
+                   let td1 = document.createElement('td');
+                   td1.id = "numTable";
+                   td1.textContent = nmtp[j].index;
+                   let td2 = document.createElement('td');
+                   td2.id = "nomTable";
+                   td2.textContent = nmtp[j].Titre;
+                   let td3 = document.createElement('td');
+                   td3.id = "pdfTable";
+                   let td3a = document.createElement('a')
+                   td3a.href = nmtp[j].pdf;
                    td3a.textContent = "Cours";
                    tr.appendChild(td1);
                    tr.appendChild(td2);

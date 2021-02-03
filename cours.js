@@ -116,8 +116,20 @@ var cours = [
                 "index" : 4,
                 "Titre" : "Partie 3-2",
                 "pdf" : "./src/pdf/nosql/coursNoSQL_partie3_2.pdf"
+            },
+            "Cours4" : {
+                "index" : 5,
+                "Titre" : "Partie 4",
+                "pdf" : "./src/pdf/nosql/coursNoSQL_partie4_1.pdf"
             }
 
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "TP1",
+                "pdf" : "./src/pdf/nosql/TP/TP1/sujetTP1.pdf"
+            }
         }
     },
     {
