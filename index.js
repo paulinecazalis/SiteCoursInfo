@@ -144,7 +144,8 @@ function afficheCours(){
     cardTdcrs.className = "card";
     cardTdcrs.id = "cardtdcrs";
     cardTdcrs.onclick = function(){
-        pageTd();
+        console.log(cours.length);
+        pageTd(); 
     };
     let cardTdcnt = document.createElement('div');
     cardTdcnt.className = "content";
@@ -280,6 +281,7 @@ function pageTd(){
     for(let i = 0; i<cours.length; i++){
        if(document.getElementById('title-cours').textContent == cours[i].name){
            let nmtd = Object.values(cours[i].TD);
+           console.log(nmtd);
            if(cours[i].TD != null){
                for(let j = 0; j< nmtd.length; j++){
                    let tr = document.createElement('tr');
@@ -294,7 +296,7 @@ function pageTd(){
                    td3.id = "pdfTable";
                    let td3a = document.createElement('a')
                    td3a.href = nmtd[j].pdf;
-                   td3a.textContent = "Cours";
+                   td3a.textContent = "TD";
                    tr.appendChild(td1);
                    tr.appendChild(td2);
                    tr.appendChild(td3);
@@ -322,6 +324,7 @@ function pageTd(){
                     }
                     afficheCours();
                 }
+                
             }
        }
     }
@@ -350,7 +353,7 @@ function pageTp(){
                    td3.id = "pdfTable";
                    let td3a = document.createElement('a')
                    td3a.href = nmtp[j].pdf;
-                   td3a.textContent = "Cours";
+                   td3a.textContent = "TP";
                    tr.appendChild(td1);
                    tr.appendChild(td2);
                    tr.appendChild(td3);

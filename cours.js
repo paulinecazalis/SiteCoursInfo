@@ -29,6 +29,20 @@ var cours = [
                 "Titre" : "Cours 3",
                 "pdf" : "./src/pdf/cloud/Cloud3.pdf"
             }
+        },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
         }
     },
     {
@@ -46,6 +60,20 @@ var cours = [
                 "pdf" : "./src/pdf/devwebavancee/cours-JDBC.pdf"
             }
 
+        },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
         }
     },
     {
@@ -68,6 +96,20 @@ var cours = [
                 "pdf" : "./src/pdf/idc/resume_DTD.pdf"
             }
             
+        },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
         }
     },
     {
@@ -90,6 +132,13 @@ var cours = [
                 "index" : 1,
                 "Titre" : "TD1",
                 "pdf" : "./src/pdf/uml/TD/TD1.pdf"
+            }
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
             }
         }
     },
@@ -124,6 +173,13 @@ var cours = [
             }
 
         },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
         "TP" : {
             "TP1" : {
                 "index" : 1,
@@ -156,6 +212,20 @@ var cours = [
                 "Titre" : "Cours 3 : Accord & coordination",
                 "pdf" : "./src/pdf/systemedistr/cours-accord.pdf"
             }
+        },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TP" : {
+            "TP1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
         }
     },
     {
@@ -163,6 +233,20 @@ var cours = [
         "image": "./img/fgbcx120.JPG",
         "Cours" : {
             "Cours1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TD" : {
+            "TD1" : {
+                "index" : 1,
+                "Titre" : "",
+                "pdf" : ""
+            }
+        },
+        "TP" : {
+            "TP1" : {
                 "index" : 1,
                 "Titre" : "",
                 "pdf" : ""
