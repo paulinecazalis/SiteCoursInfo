@@ -56,7 +56,18 @@ var cours = [
                 "index" : 1,
                 "Titre" : "Cours 1",
                 "pdf" : "./src/pdf/idc/idc-CM1-2.pdf"
+            },
+            "Cours2" : {
+                "index" : 2,
+                "Titre" : "Cours 2",
+                "pdf" : "./src/pdf/idc/idc-CM3.pdf"
+            },
+            "Cours3" : {
+                "index" : 3,
+                "Titre" : "Présentation DTC",
+                "pdf" : "./src/pdf/idc/resume_DTD.pdf"
             }
+            
         }
     },
     {
