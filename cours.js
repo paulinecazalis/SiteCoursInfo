@@ -18,6 +18,16 @@ var cours = [
                 "index" : 1,
                 "Titre" : "Cours 1",
                 "pdf" : "./src/pdf/cloud/Cloud1.pdf"
+            },
+            "Cours2" : {
+                "index" : 2,
+                "Titre" : "Cours 2",
+                "pdf" : "./src/pdf/cloud/Cloud2.pdf"
+            },
+            "Cours3" : {
+                "index" : 3,
+                "Titre" : "Cours 3",
+                "pdf" : "./src/pdf/cloud/Cloud3.pdf"
             }
         }
     },
