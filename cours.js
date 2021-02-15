@@ -28,6 +28,11 @@ var cours = [
                 "index" : 3,
                 "Titre" : "Cours 3",
                 "pdf" : "./src/pdf/cloud/Cloud3.pdf"
+            },
+            "Cours4" : {
+                "index" : 4,
+                "Titre" : "Cours 4",
+                "pdf" : "./src/pdf/cloud/Cloud4.pdf"
             }
         },
         "TD" : {
@@ -82,17 +87,27 @@ var cours = [
         "Cours" : {
             "Cours1" : {
                 "index" : 1,
-                "Titre" : "Cours 1",
+                "Titre" : "Cours 1-2",
                 "pdf" : "./src/pdf/idc/idc-CM1-2.pdf"
             },
             "Cours2" : {
                 "index" : 2,
-                "Titre" : "Cours 2",
+                "Titre" : "Cours 3",
                 "pdf" : "./src/pdf/idc/idc-CM3.pdf"
             },
             "Cours3" : {
                 "index" : 3,
-                "Titre" : "Présentation DTC",
+                "Titre" : "Cours 4",
+                "pdf" : "./src/pdf/idc/idc-CM4.pdf"
+            },
+            "Cours4" : {
+                "index" : 4,
+                "Titre" : "Cours 4-2",
+                "pdf" : "./src/pdf/idc/IDC-CM4-xml_principes.pdf"
+            },
+            "Cours5" : {
+                "index" : 5,
+                "Titre" : "Présentation DTD",
                 "pdf" : "./src/pdf/idc/resume_DTD.pdf"
             }
             
@@ -125,6 +140,11 @@ var cours = [
                 "index" : 2,
                 "Titre" : "Cours 2",
                 "pdf" : "./src/pdf/uml/Cours 2 UML.pdf"
+            },
+            "Cours3" : {
+                "index" : 3,
+                "Titre" : "Cours 3",
+                "pdf" : "./src/pdf/uml/Cours 3 UML.pdf"
             }
         },
         "TD" : {
