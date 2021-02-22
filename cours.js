@@ -110,7 +110,7 @@ var cours = [
                 "Titre" : "Présentation DTD",
                 "pdf" : "./src/pdf/idc/resume_DTD.pdf"
             }
-            
+
         },
         "TD" : {
             "TD1" : {
@@ -152,6 +152,11 @@ var cours = [
                 "index" : 1,
                 "Titre" : "TD1",
                 "pdf" : "./src/pdf/uml/TD/TD1.pdf"
+            },
+            "TD2" : {
+                "index" : 2,
+                "Titre" : "TD2",
+                "pdf" : "./src/pdf/uml/TD/TD2.pdf"
             }
         },
         "TP" : {
