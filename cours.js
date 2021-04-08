@@ -230,30 +230,56 @@ var cours = [
             "Cours1" : {
                 "index" : 1,
                 "Titre" : "Rappel",
-                "pdf" : "./src/pdf/systemedistr/cours-rappel-temps.pdf"
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/cours-rappel-temps.pdf"
             },
             "Cours2" : {
                 "index" : 2,
                 "Titre" : "Cours 1 : Modélisation conceptuelle des Systèmes Distribués",
-                "pdf" : "./src/pdf/systemedistr/cours-modele-sd.pdf"
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/cours-modele-sd.pdf"
             },
             "Cours3" : {
                 "index" : 3,
                 "Titre" : "Cours 2 : Exclusion mutuelle",
-                "pdf" : "./src/pdf/systemedistr/cours-mutex.pdf"
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/cours-mutex.pdf"
             },
             "Cours4" : {
                 "index" : 4,
                 "Titre" : "Cours 3 : Accord & coordination",
-                "pdf" : "./src/pdf/systemedistr/cours-accord.pdf"
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/cours-accord.pdf"
             }
         },
         "TD" : {
             "TD1" : {
                 "index" : 1,
-                "Titre" : "",
-                "pdf" : ""
-            }
+                "Titre" : "Diffusion clausale",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD1_DIFFUSION/td-diffusion_sujet.pdf"
+            },
+            "TD1 CORRECTION" : {
+                "index" : 2,
+                "Titre" : "Diffusion clausale - correction",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD1_DIFFUSION/TD-diffusion-CORRECTION.pdf"
+            },
+            "TD2" : {
+                "index" : 3,
+                "Titre" : "Etude du modèle Linda de mémoire partagée",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD2_LINDA/td-linda_sujet.pdf"
+            },
+            "TD2 CORRECTION" : {
+                "index" : 4,
+                "Titre" : "Etude du modèle Linda de mémoire partagée - correction",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD2_LINDA/TD-Linda_CORRECTION.pdf"
+            },
+            "TD3" : {
+                "index" : 5,
+                "Titre" : "Influence du contexte de faute",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD3_FAUTES/td-fautes_sujet.pdf"
+            },
+            "TD3 CORRECTION" : {
+                "index" : 6,
+                "Titre" : "Influence du contexte de faute - correction",
+                "pdf" : "./src/pdf/systemedistr/Cours Cariou/TD/TD3_FAUTES/TD-fautes_CORRECTION.pdf"
+            },
+
         },
         "TP" : {
             "TP1" : {
